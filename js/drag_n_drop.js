@@ -120,4 +120,4 @@ fileInput.addEventListener('change', () => {
     //call function again to refresh the page
     fetchImages('app/select.php');
   }
-  //
+  ////

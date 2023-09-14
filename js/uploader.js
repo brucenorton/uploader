@@ -61,3 +61,4 @@ async function inserter(data, url){
   //call function again to refresh the page
   fetchImages('app/select.php');
 }
+//  
