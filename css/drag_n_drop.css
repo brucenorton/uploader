@@ -1,0 +1,243 @@
+/* css/drag_n_drop.css */
+/* see section below:: added drop-zone styles */
+/* mini reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(32 32 32 /1);
+  color: rgb(240 240 240 / 0.95);
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  line-height: 2em;
+}
+
+/* end mini reset */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+p,
+ul {
+  font-family: "DM Sans", sans-serif;
+}
+
+ul {
+  padding-left: 1.44rem;
+}
+
+strong {
+  color: rgb(236 121 66 /1);
+}
+
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+figure img {
+  width: 100%;
+}
+
+figure figcaption {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(240 240 240 /1);
+  position: relative;
+  top: -1rem;
+  background-color: rgb(64 64 64 /1);
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  padding: 0 0.5rem;
+  width: 100%;
+  background-color: rgba(216, 216, 216, 1);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(auto, auto));
+}
+
+nav a {
+  padding: 0.5rem;
+  font-weight: 300;
+  text-decoration: none;
+  transition: background-color 0.5s;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  font-weight: 600;
+}
+
+nav a:link,
+nav a:visited {
+  color: rgb(39 39 39 / 0.85);
+  transition: color 0.5s;
+  /*font-size: 1rem;*/
+}
+
+nav a:hover,
+nav a:focus {
+  color: rgba(240, 240, 240, 0.95);
+  background-color: rgba(16, 16, 16, 0.95);
+  text-decoration: none;
+}
+
+nav #logo {
+  position: absolute;
+  left: 0;
+  max-height: none;
+}
+
+nav img {
+  max-height: 40px;
+  width: initial;
+}
+
+nav {
+  justify-content: end;
+}
+
+a:link,
+a:visited {
+  color: rgba(151, 193, 234, 0.85);
+  transition: color 0.5s;
+}
+
+a:hover,
+a:focus {
+  color: rgba(236, 121, 66, 1);
+  text-decoration: none;
+  background-color: rgba(240, 240, 240, 0.15);
+}
+
+a:active {
+  color: rgba(151, 193, 234, 0.85);
+}
+
+/* header */
+header {
+  padding: 1rem;
+  min-height: 33vh;
+  width: 100%;
+  background: url(../../images/beaumont_sunset_bg.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  position: relative;
+  overflow: hidden;
+}
+
+main {
+  padding: 1.2rem 1.2rem 9rem 1.2rem;
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+main>section {
+  margin: 3rem 0;
+}
+
+hr {
+  margin: 3rem 0;
+}
+#submit-paragraph{
+  text-align: right;
+}
+
+form{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form a, form a:link, form a:visited {
+  background-color: rgb(66 162 236 / 0.95);
+  color: rgb(240 240 240 / 0.95);
+  padding: 0.25rem 1rem;
+  border-radius: 1.2rem;
+  text-decoration: none;
+}
+form a:hover, form a:focus {
+  background-color: rgb(16 16 16 / 0.95);
+  color: rgb(66 162 236 / 0.95);
+}
+form fieldset{
+  padding: 0.5rem;
+}
+
+#image-info{
+  text-align: center;
+  font-family: monospace;
+  color: rgb(168 210 109 / 0.95);
+
+}
+/* added drop-zone styles */
+  #drop-zone{
+    background-color: rgb(168 210 109 / 0.75);
+    width: min(90%, 500px);
+    height: 300px;
+    margin: 0 auto;
+  }
+  #drop-zone img{
+    max-width: 100%;
+  }
+  #drop-zone.dragover{
+    background-color: rgb(206 226 107 / .95);
+  }
+  #drop-zone.dropped{
+    height: unset;
+    max-width: 400px;
+    padding: 1rem;
+  }
+
+
+
+
+/* from our earlier gallery.html example */
+  #gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.44rem;
+  }
+
+
+/* @media queries */
+@media screen and (min-width:750px){
+  #gallery{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media screen and (min-width: 1100px){
+  #gallery{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+footer {
+  background-color: rgb(32 32 32 /1);
+  position: fixed;
+  width: 100vw;
+  bottom: 50px;
+  padding: 1.2rem;
+}
+
+
+
+
